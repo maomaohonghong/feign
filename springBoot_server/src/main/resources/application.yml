@@ -1,0 +1,15 @@
+server:
+  port: 8087
+
+spring:
+  application:
+    name: service-server #服务名称
+
+#配置Eureka
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8090/eureka/,http://localhost:8091/eureka/
+  instance:
+    prefer-ip-address: true #使用ip地址注册
+    instance-id: 127.0.0.1:8087
